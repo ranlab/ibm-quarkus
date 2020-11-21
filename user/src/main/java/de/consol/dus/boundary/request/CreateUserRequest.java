@@ -1,24 +1,18 @@
 package de.consol.dus.boundary.request;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@NoArgsConstructor
-@Data
+@lombok.NoArgsConstructor
+@lombok.Data
 public class CreateUserRequest {
 
-  @NotNull
-  @Size(max = 255)
-  private String username;
+    @javax.validation.constraints.NotNull
+    @javax.validation.constraints.Size(max = 255)
+    private String username;
 
-  @NotNull
-  @Email
-  private String email;
+    @javax.validation.constraints.NotNull
+    @javax.validation.constraints.Email
+    private String email;
 
-  @NotNull
-  @Size(max = 255)
-  private String favoriteColor;
+    @javax.validation.constraints.NotNull
+    @javax.validation.constraints.Size(max = 255)
+    private String favoriteColor;
 }

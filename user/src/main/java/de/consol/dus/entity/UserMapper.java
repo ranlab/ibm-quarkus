@@ -1,11 +1,13 @@
 package de.consol.dus.entity;
 
-import de.consol.dus.boundary.request.CreateUserRequest;
-import de.consol.dus.boundary.response.UserResponse;
-import org.mapstruct.Mapper;
-
-@Mapper(componentModel = "cdi")
+/**
+ * Hier ist ein 1:1 Mapping zwischen den Feldern User <--> Response 
+ * 
+ * @see https://www.codeflow.site/de/article/mapstruct
+ * @author promyx
+ */
+@org.mapstruct.Mapper(componentModel = "cdi")
 public interface UserMapper {
-  UserResponse entityToResponse(User user);
-  User requestToUser(CreateUserRequest request);
+    de.consol.dus.boundary.response.UserResponse entityToResponse(de.consol.dus.entity.User user);
+    de.consol.dus.entity.User requestToUser(de.consol.dus.boundary.request.CreateUserRequest request);
 }

@@ -1,15 +1,12 @@
 package de.consol.dus.boundary.response;
 
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
-import lombok.Builder;
-import lombok.Value;
-
-@Builder
-@Value
+@lombok.Builder
+@lombok.Value
 public class ErrorResponse {
-  ErrorCode errorCode;
-  String errorMessage;
+    de.consol.dus.boundary.response.ErrorCode errorCode;
+    java.lang.String errorMessage;
 
-  @JsonPOJOBuilder(withPrefix = "")
-  public static class Builder {}
+    @com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder(withPrefix = "")
+    public static class Builder {
+    }
 }
